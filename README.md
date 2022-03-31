@@ -1,3 +1,3 @@
 # html-1-demo
-- add html simple demo
-- add css rainbow
+- 0.1 add html demo
+- 0.2 add css rainbow
