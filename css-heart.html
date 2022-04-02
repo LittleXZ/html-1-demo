@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>heart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body > div {
+            margin-top: 200px;
+            margin-left: 200px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .heart > .left {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+        }
+
+        .heart > .right {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transform: rotate(45deg);
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+        }
+
+        .heart > .bottom {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transform: rotate(45deg);
+        }
+
+        /*demo1*/
+        .demo1 {
+            transition: all .5s;
+        }
+
+        .demo1:hover {
+            transform: scale(1.5);
+        }
+
+        /*demo2*/
+        .demo2 {
+            animation: .5s infinite alternate jump;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="heart demo1">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+</div>
+
+<div class="heart demo2">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+</div>
+</body>
+</html>
